@@ -1,0 +1,109 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+
+}
+body{
+    min-height: 100vh;
+    background: #6cb1ff;
+}
+
+/*------------------------------ button --------------------------- */
+
+#btn{
+
+    justify-content: center;
+}
+.button {
+display: inline-block;
+border-radius: 4px;
+background-color: #f4511e;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 28px;
+padding: 20px;
+width: 200px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+}
+
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+
+/* -------------------------------------- */
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    display: none ;
+
+}
+.contentBox{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: #ffff ;
+    border-radius: 10%;
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0, 0,0,1);
+}
+.contentBox .content h2{
+
+    position: relative;
+    display: flex;
+    left: 200px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  
+}
+.close{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #f3f3f3 url('./img.png');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+.show{
+
+    display: block;
+}
+.hidden{
+    display: none;
+
+}
